@@ -6,16 +6,16 @@
    tasks:
    -name:install httpd on webserver
       yum:
-	    name:httpd
-		state:present
-	-name:insert index page
-	   template:
-	     src:index.html
-		 dest:/var/www/html/index.html
-	-name:START HTTPD
-	   service: 
-	     name:httpd
-		 state:started
+        name:httpd
+	state:present
+   -name:insert index page
+	template:
+	  src:index.html
+          dest:/var/www/html/index.html
+   -name:START HTTPD
+      service: 
+	 name:httpd
+         state:started
 - name:install db
    hosts:db
    become:true
@@ -23,9 +23,9 @@
    tasks: 
    -name:install db ondb server
      yum: 
-	   name:install mysql
-	   state:present
+      name:install mysql
+      state:present
    -name:start mysql
      service:
-	   name:MYSQL STRTTTTTT
-	   state:started
+	 name:MYSQL STRTTTTTT
+	 state:started
