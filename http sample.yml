@@ -27,5 +27,5 @@
       state:present
    -name:start mysql
      service:
-	 name:MYSQL STRTTTTTT
-	 state:started
+      name:MYSQL STRTTTTTT
+      state:started
